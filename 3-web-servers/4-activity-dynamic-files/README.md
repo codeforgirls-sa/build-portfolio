@@ -1,54 +1,46 @@
 # Serving Dynamic Pages In Express
 
-## Step 1: Write server code
-1. Create a folder
-2. Create a javascript file called `server.js`
-3. Add following code
+Start working from the previous activity, then follow below steps:
+
+## Step 1: Initializing
+- Install *hbs* package
 ```
-const express = require('express');
+npm install hbs
+```
+
+# Step 2: HTML Templating
+- create a folder named `views`
+- Move *index.html* file to *views* folder
+- Rename *index.html* to *index.hbs*
+- Inside *index.hbs* edit body as following
+```
+<h1>Hi, I'm {{name}}</h1>
+```
+
+# Step 3: Server side
+- Import *path* package on top of the file
+```
 const path = require('path');
-const app = express();
+```
 
-//view engine setup
-app.set("views", path.join(__dirname, "views")); //setting views directory for views.
-app.set("view engine", "hbs"); //setting view engine as handlebars
+- Add view engine setup before *app.get()* function
+```
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "hbs");
+```
 
-app.get('/', function (req, res) {
-  res.render('index', {
-    name: 'Nora AlNashwan',
-    city: 'Riyadh',
-    phone: '054-111-1101',
-    email: 'nora@codeforgirls.org',
-    bio: 'Nora has served as a developer, evangelist, entrepreneur and consultant in the technology industry. \nShe enjoys solving complex technical problems, and believes in impacting world through technology.'
+- Change response to render index file with your name
+```
+res.render('index', {
+    name: 'Nora AlNashwan'
   });
 });
-
-app.listen(3000, ()=>{console.log('server running on http://localhost:3000/')})
 ```
 
-## Step 2: Write view code
-1. Create views folder
-2. Create a file named `index.hbs`
-3. Add following code inside body
-```
-<section>
-    <div>
-        <h1>{{name}}</h1>
-        <div>{{city}} · {{phone}} ·
-          <a href="mailto:{{email}}">{{email}}</a>
-        </div>
-        <p>{{bio}}</p>
-    </div>
-</section>
-```
-
-## Step2: Run code
-1. Open terminal in enclosing folder
-2. Install required libraries
-```
-npm install
-```
-3. Run the file
+## Step 4: Run It
+- Run the file
 ```
 node server.js
 ```
+
+Congrats 🎉 Play with the response and index file to include more information about you such as city, phone, email and bio.
