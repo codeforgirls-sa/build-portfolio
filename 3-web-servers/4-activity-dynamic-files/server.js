@@ -12,7 +12,8 @@ app.get('/', function (req, res) {
     city: 'Riyadh',
     phone: '054-111-1101',
     email: 'nora@codeforgirls.org',
-    bio: 'Nora has served as a developer, evangelist, entrepreneur and consultant in the technology industry. \nShe enjoys solving complex technical problems, and believes in impacting world through technology.'
+    bio: 'Nora has served as a developer, evangelist, entrepreneur and consultant in the technology industry. \nShe enjoys solving complex technical problems, and believes in impacting world through technology.',
+    skills: ['Blockchain', 'Nodejs']
   });
 });
 

@@ -43,4 +43,4 @@ res.render('index', {
 node server.js
 ```
 
-Congrats 🎉 Play with the response and index file to include more information about you such as city, phone, email and bio.
+Congrats 🎉 Play with the response and index file to include more information about you such as city, phone, email, bio and skills.

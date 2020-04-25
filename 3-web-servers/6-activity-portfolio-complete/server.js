@@ -39,18 +39,20 @@ var projects = [
   {title: "Brochure", category: "Design", image: "6.jpg"}
 ]
 
+var contact = {
+  email: "nora@codeforgirls.org"
+}
+
 var social = [
   {title: "twitter", link: "http://twitter.com/xnorax"},
   {title: "linkedin", link: "https://www.linkedin.com/in/xnorax/"}
 ]
 
-
-//email: 'nora@codeforgirls.org',
-
   res.render('index', {
     about: about,
     abilities: abilities,
     projects: projects,
+    contact: contact,
     social:social
     });
 });
