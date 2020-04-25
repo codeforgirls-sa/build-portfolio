@@ -18,9 +18,9 @@ npm install hbs
 ```
 
 # Step 3: Server side
-- Import *path* package on top of the file
+- Import *hbs* package on top of the file
 ```
-const path = require('path');
+const hbs = require('hbs');
 ```
 
 - Add view engine setup before *app.get()* function
